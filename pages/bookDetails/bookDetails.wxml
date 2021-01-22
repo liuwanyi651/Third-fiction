@@ -1,0 +1,92 @@
+<!-- 上面这一块 -->
+<view class="all bbs" >
+  <view class="top"></view>
+  <view class="white flex j-c">
+    <view class="pos">
+      <image src="{{host+list.cover}}" class="imge"></image>
+    </view>
+  </view>
+  <view class="name d-fc an-c">
+    <view class="bookname fw-b pd10">{{list.title}}</view>
+    <view class="writer cg">{{list.author}}</view>
+  </view>
+</view>
+<!-- 按钮 -->
+  <view class="btn flex j-arou mt10 w-max">
+    <button class="btn1" type="primary">开始阅读</button>
+    <button wx:if="{{!show}}" bindtap="addBookcase" class="btn1" type="warn">加入书架</button>
+    <button wx:if="{{show}}" class="btn1" type="default">已加入书架</button>
+  </view>
+  <!-- 下面 -->
+  <view class="content">
+    <view class="flex j-center">
+      <view class="mt30" wx:for="{{star}}" wx:key="index">
+        <image src="../../assets/star.png" class="img"></image>
+      </view>
+      <view class="mt30" wx:for="{{stara}}" wx:key="index">
+        <image src="../../assets/star-a.png" class="img"></image>
+      </view>
+    </view>
+    <view class="t-center fs14 cg">
+      更新至{{list.lastChapter}}
+    </view>
+    <!-- 里面含有 详情和评论 -->
+    <view class="w-max flex j-center">
+      <view class="edit w-90 bgc-w">
+          <view class="title flex bbs cg">
+            <!-- 详情 -->
+            <view class="w-50 flex j-center">
+              <view class="{{num === 0 ?'active':''}}"  
+              bindtap="goDetail">详情
+              </view>
+            </view>
+            <!-- 评论 -->
+            <view class="w-50 flex j-center">
+              <view class="{{num === 1 ?'active':''}}"  bindtap="goRemark">评论（{{docs.length}}）
+              </view>
+            </view>
+          </view>
+          <!-- 判断  进入详情页面 -->
+          <view wx:if="{{num === 0}}">
+            <scroll-view scroll-y="true" class="scroll-header bbs " >
+               <view class="text cg ">{{list.longIntro}}</view>
+               <view class="t-center fs14 cg">总目录（{{list.chaptersCount}}）章</view>
+               <view class="flex j-betw mt10">
+                 <view class="fs16 cg">看过这本书的人还在看</view>
+                 <view class="flex" bindtap="flush">
+                    <view>
+                      <image src="../../assets/flush.png" class="image"></image>
+                    </view>
+                    <view class="fs16 cf50 cg">换一换</view>
+                 </view>
+               </view>
+               <view class="flex">
+                    <view wx:for="{{books}}" wx:key="index" bindtap="clickBook" data-item="{{item}}" data-index="{{index}}">
+                      <view>
+                        <image src="{{host+item.cover}}"  class="bookimage"></image>
+                      </view>
+                      <view class="fs14 cg t-center">
+                        {{item.title}}
+                      </view>
+                    </view>
+                </view>
+            </scroll-view>
+          </view>
+          <!-- 判断  进入评论页面 -->
+          <view wx:if="{{num === 1}}">
+            <scroll-view scroll-y="true" class="scroll-header bbs " >
+                    <view wx:for="{{docs}}" wx:key="index" class="bbs flex" >
+                      <view class="docsimg">
+                        <image src="{{host+item.author.avatar}}"  class="docsimage"></image>
+                      </view>
+                      <view class="flex-clum j-center">
+                          <view class="fs14 cr">{{item.author.nickname}}</view>
+                          <view class="fs14 cg">{{item.content}}</view>
+                      </view>
+                    </view>
+              </scroll-view>     
+            </view>
+          </view>
+    </view>
+    <view class="h50 bgc238"></view>
+  </view>

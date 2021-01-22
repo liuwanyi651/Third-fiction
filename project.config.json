@@ -1,0 +1,137 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.0.4",
+  "appid": "wxf272e71f9a83e118",
+  "projectname": "Third-fiction",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/searchDetails/searchDetails",
+          "pathName": "pages/searchDetails/searchDetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/smallClassify/smallClassify",
+          "pathName": "pages/smallClassify/smallClassify",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/bookDetails/bookDetails",
+          "pathName": "pages/bookDetails/bookDetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/bookcity/bookcity",
+          "pathName": "pages/bookcity/bookcity",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/bookDetails/bookDetails",
+          "pathName": "pages/bookDetails/bookDetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/rankClass/rankClass",
+          "pathName": "pages/rankClass/rankClass",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/bookrack/bookrack",
+          "pathName": "pages/bookrack/bookrack",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/rankClass/rankClass",
+          "pathName": "pages/rankClass/rankClass",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

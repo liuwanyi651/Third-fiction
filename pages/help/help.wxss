@@ -1,0 +1,17 @@
+.title{
+  padding: 20rpx;
+}
+.box2{
+  padding: 10rpx 20rpx;
+  font-size: 38rpx;
+  word-spacing:16rpx
+}
+.box3{
+  padding: 0 20rpx;
+  font-size: 32rpx;
+  text-indent:2em;
+  color:#444444;
+  word-spacing:16rpx; 
+  letter-spacing: 2rpx;
+  line-height: 50rpx;
+}

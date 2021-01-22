@@ -1,0 +1,35 @@
+.all{
+  height: 90rpx;
+  font-size: 34rpx;
+  line-height: 90rpx;
+}
+.active{
+  border-bottom: 2px solid red;
+  color: red;
+}
+ /*书籍样式部分 */
+ .img{
+  width:200rpx;
+  height: 300rpx;
+}
+.auth{
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+.text{
+  font-size: 30rpx;
+  width: 500rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  /* background-color: rosybrown; */
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3;
+  margin-top: 20rpx;
+}
+.late{
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.scroll-header {
+  height: 1200rpx;
+}

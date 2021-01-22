@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor":"#FF0033",
+  "navigationBarTitleText": "帮助",
+  "enablePullDownRefresh": true 
+}

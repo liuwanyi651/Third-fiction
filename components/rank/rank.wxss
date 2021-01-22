@@ -1,0 +1,20 @@
+.text{
+  color: rgb(179, 171, 171);
+  padding: 10px;
+}
+.rankboy{
+  border-bottom: 2rpx solid #EEE;
+}
+.rank{
+  display: flex;
+  font-size: 34rpx;
+  color: rgb(71, 71, 71);
+}
+.img{
+  padding: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.booktitle{
+  line-height: 100rpx;
+}

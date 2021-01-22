@@ -1,0 +1,63 @@
+<view class="flex j-betw all bgc238 cg"  wx:if="{{obj.monthRank.length>0}}">
+  <view class="w-33 flex j-center">
+    <view class="{{num == 1 ?'active':''}}" bindtap="goOne" data-index="1">周榜</view>
+  </view>
+  <view class="w-33 flex j-center" bindtap="clickMonth">
+    <view class="{{num == 2 ?'active':''}}" bindtap="goOne" data-index="2">月榜</view>
+  </view>
+  <view class="w-33 flex j-center" bindtap="clickTotal">
+    <view class="{{num == 3 ?'active':''}}" bindtap="goOne" data-index="3">总榜</view>
+  </view>
+</view>
+<!-- 判断  进入周榜页面 -->
+<view wx:if="{{num === '1'}}">
+  <scroll-view scroll-y="true" class="scroll-header " >
+    <view wx:for="{{arr1}}" wx:key="index">
+      <view class="flex bbs pd10" bindtap="clickBook" data-item="{{item}}" data-index="{{index}}">
+        <view>
+          <image class="img" src="{{host+item.cover}}"></image>
+        </view>
+        <view class="pdl10">
+            <view>{{item.title}}</view>
+            <view class="auth cg ">{{item.author}}</view>
+            <view class="text cg  ">{{item.shortIntro}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- 判断  进入月榜页面 -->
+<view wx:if="{{num === '2'}}" >
+  <scroll-view scroll-y="true" class="scroll-header " >
+    <view wx:for="{{arr2}}" wx:key="index">
+      <view class="flex bbs pd10" bindtap="clickBook" data-item="{{item}}" data-index="{{index}}">
+        <view>
+        <image class="img" src="{{host+item.cover}}"></image>
+        </view>
+        <view class="pdl10">
+            <view>{{item.title}}</view>
+            <view class="auth cg ">{{item.author}}</view>
+            <view class="text cg  ">{{item.shortIntro}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- 判断  进入总榜页面 -->
+<view wx:if="{{num === '3'}}">
+  <scroll-view scroll-y="true" class="scroll-header " >
+    <view wx:for="{{arr3}}" wx:key="index">
+      <view class="flex bbs pd10" bindtap="clickBook" data-item="{{item}}" data-index="{{index}}" >
+        <view>
+        <image class="img" src="{{host+item.cover}}"></image>
+        </view>
+        <view class="pdl10">
+            <view>{{item.title}}</view>
+            <view class="auth cg ">{{item.author}}</view>
+            <view class="text cg  ">{{item.shortIntro}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+

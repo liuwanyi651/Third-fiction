@@ -1,0 +1,81 @@
+.ipt{
+  border: 1px solid #ddd;
+  height: 70rpx;
+  width: 90%;
+  margin: 10px;
+  background-color:rgb(239,239,239) ;
+  position: relative;
+  font-size: 30rpx;
+  text-align: center;
+}
+.iptplace{
+  font-size: 30rpx
+}
+.img{
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  top: 57rpx;
+  left: 36rpx;
+}
+.imgg{
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  top: 57rpx;
+  right: 41rpx;
+}
+.women{
+  font-size: 30rpx;
+  color: rgba(73, 72, 72, 0.667);
+}
+.load{
+  margin-right: 10rpx;
+}
+.img1{
+  width: 40rpx;
+  height: 40rpx;
+}
+.women1{
+  font-size: 30rpx;
+  color: #f50f50;
+}
+/* 书籍样式 */
+
+.imge{
+  width:200rpx;
+  height: 300rpx;
+}
+.auth{
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+.text{
+  font-size: 30rpx;
+  width: 500rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  /* background-color: rosybrown; */
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3;
+  margin-top: 20rpx;
+}
+.late{
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+
+.suiji{
+  display: flex;
+  flex-wrap: wrap;
+}
+.bg{
+  margin: 10rpx;
+  color: white;
+  padding: 10rpx;
+  opacity: 0.7;
+  font-size: 30rpx;
+}
+.record{
+  height: 500rpx;
+}

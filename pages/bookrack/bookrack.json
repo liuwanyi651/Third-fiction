@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#f50f50",
+  "navigationBarTitleText": "书架",
+  "enablePullDownRefresh": true 
+}

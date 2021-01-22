@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/bookrack/bookrack",  
+    "pages/bookcity/bookcity",
+    "pages/search/search",
+    "pages/help/help",
+    "pages/smallClassify/smallClassify",
+    "pages/bookDetails/bookDetails",
+    "pages/rankClass/rankClass",
+    "pages/home/home"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f50f50",
+    "navigationBarTitleText": "追书神器",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "selectedColor": "#f50",
+    "color": "#000",
+    "list": [
+      {
+        "text":"书架",
+        "iconPath": "assets/bookcase.png",
+        "pagePath": "pages/bookrack/bookrack",
+        "selectedIconPath": "assets/b-bookcase.png"
+      },
+      {
+        "text":"书城",
+        "iconPath": "assets/booktown.png",
+        "pagePath": "pages/bookcity/bookcity",
+        "selectedIconPath": "assets/b-booktown.png"
+      },
+      {
+        "text":"搜索",
+        "iconPath": "assets/search.png",
+        "pagePath": "pages/search/search",
+        "selectedIconPath": "assets/s-search.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

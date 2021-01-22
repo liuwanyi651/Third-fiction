@@ -1,0 +1,41 @@
+<view class="all flex">
+  <view class="pen">
+    <image src="../../assets/true.png" wx:if="{{!show}}" bindtap="godel"></image>
+    <image src="../../assets/pen.png" wx:if="{{show}}" bindtap="goshow"></image>
+  </view>
+  <view class="flex">
+    <view class="help" bindtap="goHelp">
+      <image src="../../assets/help.png"></image>
+    </view>
+    <view class="load">
+      <image src="../../assets/load.png"></image>
+    </view>
+  </view>
+</view>
+<view class="bbs"></view>
+<!-- 书架没有书的情况 -->
+<view>
+  <view class="text" wx:if="{{arr.length===0}}">
+  <view>
+    主人还没收藏书籍哦，请去书城收藏吧！
+  </view>
+</view>
+<!-- 书架有书的情况 -->
+<view class="text flex f-wrap" wx:if="{{arr.length>0}}">
+  <!-- 可以删除的情况 -->
+  <view wx:for="{{arr}}" wx:if="{{!show}}" wx:key="index" class="flex-clum p-r pd10">
+    <view>
+        <image  src="{{host+item.cover}}" class="'img'{{!show ?'box':''}}"></image>
+    </view>
+    <view>
+      <image class="imge" src="../../assets/cancel.png" bindtap="clear" data-index="{{index}}" ></image>
+    </view>
+    <view class="title cg fs14">{{item.title}}</view>
+  </view>
+  <!-- 不用删除 -->
+  <view wx:for="{{arr}}" wx:if="{{show}}" wx:key="index" class="pd10">
+    <image class="img" src="{{host+item.cover}}"></image>
+    <view class="title cg fs14">{{item.title}}</view>
+  </view>  
+</view>
+</view>

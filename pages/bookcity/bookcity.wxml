@@ -1,0 +1,35 @@
+<view class="all">
+    <view class="pos">
+        <view class="flex">
+        <!-- 动态绑定class 分类 -->
+        <view class="w-50 flex j-center">
+          <view class="{{num === 0 ?'active':''}}" bindtap="gored">分类</view>
+        </view>
+        <!--动态绑定class 排行 -->
+        <view class="w-50 flex j-center">
+          <view class="{{num === 1 ?'active':''}}"  bindtap="goRed">排行</view>
+        </view>
+      </view>
+    </view>
+</view>
+<!-- 判断  进入分类页面 -->
+<view wx:if="{{num === 0}}">
+  <view>
+    <classify classify='{{male}}' type="male"></classify> 
+    <classify classify='{{female}}' type="female"></classify>
+    <classify classify='{{press}}' type="press"></classify>
+  </view>
+</view>
+<!-- 判断  进入排行页面 -->
+<view wx:if="{{num === 1}}">
+  <view>
+    <rank rank='{{rankmale}}' type="rankmale"></rank>
+    <rank rank='{{rankfemale}}' type="rankfemale"></rank>
+  </view>
+</view>
+
+
+  
+
+
+

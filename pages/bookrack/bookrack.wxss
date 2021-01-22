@@ -1,0 +1,53 @@
+ /*20px相当于40rpx 1：2*/
+ .all{
+   margin-top: 20rpx;
+   justify-content: space-between;
+ }
+ .pen image,.help image{
+   width: 60rpx;
+   height: 60rpx;
+ }
+ .help{
+   margin-right: 20rpx;
+ }
+ .load{
+   margin-left: 10rpx;
+ }
+ .load image{
+   margin-right: 10rpx;
+   margin-top:5rpx;
+   width: 48rpx;
+   height: 48rpx;
+ }
+ .text{
+   padding: 30rpx 0;
+   text-align: center;
+   font-size: 35rpx;
+ }
+ .img{
+  width:200rpx;
+  height: 300rpx;
+  position: relative;
+}
+.imge{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 7rpx;
+  right: 5px;
+}
+.title{
+  width:200rpx;
+}
+.box{
+  animation: aduio-rotate 3s linear infinite;
+}
+/* 书摇动的样子 */
+@keyframes aduio-rotate{
+  0%{
+    transform: rotateZ(0deg);
+  }
+  50%{
+    transform: rotateZ(5deg);
+  }
+}

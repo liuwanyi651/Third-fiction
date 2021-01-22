@@ -1,0 +1,14 @@
+<!-- 排行榜男生女生 -->
+<view class="text" wx:if="{{type === 'rankmale'}}">男生</view>
+<view class="text" wx:if="{{type === 'rankfemale'}}">女生</view>
+<view>
+    <view class="rankboy" wx:for="{{rank}}" wx:key='index' bindtap="rankClass" data-item="{{item}}" data-index="{{index}}" data-type="{{type}}">
+      <view class="rank">
+        <view class="tu">
+          <image src="{{host+item.cover}}" class="img"></image>
+        </view>
+        <view class="booktitle">{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+

@@ -1,0 +1,46 @@
+<!--pages/home/home.wxml-->
+<view id="all" hover-class="hover">
+  <!--相当于html中div-->
+  <view class="box">
+    <view>
+      <image class="img" src="/assets/√.png " bindtap="gaicolor" wx:if="{{!show}}"></image>
+      <!----相当于html中的 img-->
+      <image class="img" src="/assets/√1.png " bindtap="gaicolor1" wx:if="{{show}}"></image>
+    </view>
+    <view class="bang">
+
+      <view class="zhu" bindtap="tohelp">
+        帮助
+      </view>
+
+      <view class="img1" hover-class="zhuan" bindtap="sx">
+        <image src="/assets/shuaxin.png"></image>
+      </view>
+
+    </view>
+  </view>
+
+  <view wx:if="{{arr.length===0}}">
+    <view class="tishi">主人还没收藏武功秘籍呢，请去 <text class="goshucheng" bindtap="toindex">书城</text>收藏吧</view>
+    <!----text 标签相当于html中的 span-->
+
+  </view>
+
+  <view class="shoucang" wx:if="{{arr.length>0}}">
+
+    <view class="scxq" wx:for="{{arr}}" wx:key="index" bindtap="tocontent" data-item="{{item}}">
+      <view class="img">
+        <view>
+          <image src="https://statics.zhuishushenqi.com{{item.cover}}" class="imga"></image>
+        </view>
+        <view class="imgbb">
+          <image hover-class="hovers" src="../../assets/cha.png" class="imgb" wx:if="{{show}}"></image>
+        </view>
+      </view>
+      <view class="txta">{{item.title}}</view>
+    </view>
+
+  </view>
+
+
+</view>

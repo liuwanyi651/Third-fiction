@@ -1,0 +1,11 @@
+  <!-- 男生 -->
+  <view class="text" wx:if="{{type === 'male'}}">男生</view>
+  <view class="text" wx:if="{{type === 'female'}}">女生</view>
+  <view class="text" wx:if="{{type === 'press'}}">出版</view>
+  <view class="boy flex">
+    <view class="boy-see" wx:for="{{classify}}" wx:key='index' bindtap="smallClassify" data-item="{{item}}" data-type="{{type}}">
+        <view class="title">{{item.name}}</view>
+        <view class="bookCount">{{item.bookCount}}本</view>
+    </view>
+  </view>
+                                                      

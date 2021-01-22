@@ -1,0 +1,16 @@
+.all{
+  height: 100rpx;
+  line-height:100rpx ;
+  font-size: 30rpxs;
+  position: relative;
+}
+.active{
+  border-bottom: 2px solid red;
+  color: red;
+}
+.pos{
+  width: 100%;
+  position: fixed;
+  top: 0rpx;
+  background-color: rgb(247,247,247);
+}

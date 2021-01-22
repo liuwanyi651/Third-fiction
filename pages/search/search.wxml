@@ -1,0 +1,73 @@
+<!-- 搜索框 -->
+<view class="flex j-center mt10">
+  <!-- bindconfirm 点击完成按钮时触发，event.detail = {value: value} -->
+  <input class="ipt" type="text" placeholder="请输入书名或者作者名" placeholder-class="iptplace" bindconfirm="Search"
+    bindinput="content" value="{{content}}">
+  </input>
+</view>
+<view>
+  <image class="img" src="../../assets/search.png"></image>
+</view>
+<view wx:if="{{content.length>0}}">
+  <image class="imgg" src="../../assets/cancel.png" bindtap="cancel"></image>
+</view>
+<!-- 随机页面 -->
+<view wx:if="{{flag===0}}">
+  <!-- 大家都在搜 -->
+  <view class="flex j-center">
+    <view class="flex j-betw w-90 ">
+      <view class="women">大家都在搜</view>
+      <view class="flex" bindtap="flush">
+        <view class="load">
+          <image class="img1" src="../../assets/flush.png"></image>
+        </view>
+        <view class="women1">换一换</view>
+      </view>
+    </view>
+  </view>
+  <!-- 随机颜色小说 -->
+  <view class="stoy flex j-center">
+    <view class="suiji flex w-90 ">
+      <view wx:for="{{hotWords}}" wx:key="index" class="bgc">
+        <view style="background-color:{{item.color}}" class="bg" bindtap="goSearclass" data-item="{{item}}">
+          {{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <!--搜索历史--->
+  <view class="flex j-center">
+    <view class="flex j-betw w-90 ">
+      <view class="women">搜索历史</view>
+      <view class="flex" bindtap="clearHistory">
+        <view class="load">
+          <image class="img1" src="../../assets/recycle .png"></image>
+        </view>
+        <view class="women1">清空</view>
+      </view>
+    </view>
+  </view>
+  <view class="cg fs14 m20">
+    <view wx:for="{{arras}}" wx:key="index" class="mt10">
+    <view>{{item}}</view>
+  </view>
+  </view>
+</view>
+
+<!-- 搜索书籍部分 -->
+<view wx:if="{{flag === 1}}">
+  <view>
+    <view wx:for="{{books}}" wx:key="index">
+      <view class="flex bbs pd10" bindtap="clickBook" data-item="{{item}}">
+        <view>
+          <image class="imge" src="{{host+item.cover}}"></image>
+        </view>
+        <view class="pdl10">
+          <view>{{item.title}}</view>
+          <view class="auth cg ">{{item.author}}</view>
+          <view class="text cg  ">{{item.shortIntro}}</view>
+          <view class="late cf50 ">最近收藏：{{item.latelyFollower}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

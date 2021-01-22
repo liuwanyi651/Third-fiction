@@ -1,0 +1,31 @@
+<view class="pos">
+  <!-- 第一部分小分类-->
+  <view  class="flex hot bbs cg">
+    <view wx:for="{{typeList}}" wx:key="index" class="'list'{{flag === index ?'box':''}}" bindtap="clickOne" data-index="{{index}}" data-item="{{item}}">
+      {{item.name}}
+    </view>
+  </view>
+<!-- 第二部分小分类 滚动-->
+  <scroll-view scroll-x class="scroll-header bbs " wx:if="{{arr.length>0}}">
+    <view class="flex hot cg">
+      <view wx:for="{{arr}}" wx:key="index" class="'list'{{flagTwo === index ?'box':''}}" 
+  bindtap="clickTwo" data-index="{{index}}" data-item="{{item}}" >
+    {{item}}
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="mt"></view>
+<!--下面书籍部分-->
+<view wx:for="{{arr1}}" wx:key="index">
+  <view class="flex bbs pd10" bindtap="clickBook" data-item="{{item}}" data-index="{{index}}">
+      <view>
+        <image class="img" src="{{host+item.cover}}"></image>
+      </view>
+      <view class="pdl10">
+          <view>{{item.title}}</view>
+          <view class="auth cg ">{{item.author}}</view>
+          <view class="text cg  ">{{item.shortIntro}}</view>
+      </view>
+    </view>
+</view>
